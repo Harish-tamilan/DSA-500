@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays.MinMax;
 import java.util.*;
 public class MinMax {
 
