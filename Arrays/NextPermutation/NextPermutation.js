@@ -1,4 +1,4 @@
-//Traditional permutation method, O(n*n!) time and O(n) time
+//Traditional permutation method, O(n*n!) time and O(n) space
 function permutation(ques, ans, list=[]){
     if(ques.length==0){
         list.push(ans);

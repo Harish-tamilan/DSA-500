@@ -3,7 +3,7 @@ package Arrays.NextPermutation;
 import java.util.*;
 
 public class NextPermutation {
-    //Traditional permutation method, O(n*n!) time and O(n) time
+    //Traditional permutation method, O(n*n!) time and O(n) space
     public static List<String> nextPermutation(String ques, String ans, List<String> list){
         if(ques.length()==0){
             //System.out.println(ans);
