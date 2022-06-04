@@ -1,0 +1,23 @@
+Method-1 (Brute force) O(n)-time
+
+1. Use the linear search
+2. Traverse the array and check whether the element exists, if found return the index 
+    else return -1.
+
+Method-2 (Better) O(logn)-time , but more complex if else structures
+
+1. There can be four cases 
+    i.   l<=m && m<=r
+    ii.  l<=m && m>=r
+    iii. l>=m && m<=r
+    iv.  l>=m && m>=r
+2. If condition one is met, simple binary search would solve the problem
+3. If condition four is met, binary search on descending sorted array will solve the problem
+4. If condition two is met, then place the conditions based on l, m and r.
+
+Method-3 (Optimal), O(logn)-time
+
+1. Find the pivot element (i.e The position at which the rotation starts)
+2. If pivot is found, based on the target value just check first subarray (0, pivot)
+    second subarray (pivot, n)
+3. If pivot is not found, just run the normal binary search.

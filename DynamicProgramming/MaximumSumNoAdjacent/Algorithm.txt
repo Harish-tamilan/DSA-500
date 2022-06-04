@@ -1,0 +1,22 @@
+Method-1 O(2^n) time and O(n) space for recursion stack.
+1. Use the tradition recursive approach
+2. There are two choices
+    1. Add the current number to sum, increase the position by 2
+    2. Leave the current number to sum, increase the position by 1
+3. Make the recursive calls based on the above choices.
+4. The base condition is ind>=2 (end of the list),
+    compare the max with the current sum and reassign the list accordingly.
+
+Method-2 O(n) time and O(n) space.
+1. Using the 1d dynamic programming
+2. Create an 1d array (tab) of the input array size
+3. Iterate from 1st index (2nd position)
+4. For each index try the same include, exclude strategy
+    1. Include - Add current index value arr[i] with maximum Sum at i-2 index (tab[i-2])
+    2. Exclude - The maximum sum till the previous index (tab[i-1])
+5. Pick the maximum and proceed further.
+
+Method-3 O(n) time and O(1) space.
+1. In the above method, we need only two instances, tab[i-1] and tab[i-2].
+2. Instead of creating the array for the comparisions, we can simulate the same
+    using two variables, inc and exc

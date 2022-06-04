@@ -1,0 +1,9 @@
+Method-1 O(n)-time
+
+1. Use the linear search approach.
+2. Iterate the array and if an element is found return it else return -1.
+
+Method-2 Worst case O(n), but in most cases it will be less than O(n)
+
+1. Since the elements differ by atmost k, it can be used to reduce the iterations.
+2. Instead of comparing all the elements, iterate to the next ((k/target-)current) element.

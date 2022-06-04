@@ -1,0 +1,15 @@
+Method-1 O(n) time and O(n) space, where n is the length of longest array
+
+1. Maintain an HashMap to keep the count of each element present in all the 
+    three arrays.
+2. Iterate the HashMap and if the count of a number is three, add that number to the 
+    result list
+
+
+
+Method-2 O(n) time, where n is the length of longest array
+
+1. Follow the first 3 steps in Intersection of two arrays
+2. Now, if array1[i]<array2[j] increment i
+3. Else if array2[j]<array3[k] increment j
+4. Else increment k 

@@ -1,0 +1,10 @@
+Method-1 O(nlogn) time, O(p) space (where p denotes the number of platforms)
+
+1. Sort the trains based on their departure time so that we can greedily select
+    the train which leaves early first.
+2. Create an array with no of platforms as size.
+3. Iterate the array and check whether the platform array has a train by 
+    comparing the start time of current train and the departure time of 
+    existing train.
+4. If the departure time is select, it means that the train has left,
+    so we can stop the train here.

@@ -1,0 +1,20 @@
+Method-1 O(n)-time and O(n)-space
+1. Create a new Array
+2. Find the count of negatives and positives
+3. Iterate the array and store the negatives in even indexes and positives in odd indexes
+4. If the negatives or positives elements count is met, instead of increasing the index by two, 
+    increase by one and store the remaining elements.
+
+Method-2 O(n^2)-time and O(1)-space
+1. The requirement is to store the negatives in odd indices and
+    positives in even indices.
+2. Iterate the array, if the index is odd, find the nearest negative 
+    element's (nth) index and swap the (i,n) indices.
+3. After swapping the indices, right rotate the subarray (i+1,n), so that
+    the order is preserved.
+4. Similarly do the same for positives number in odd indices.
+
+Method-3 O(n)-time and O(1)-space (Order is not maintained)
+1. Simply move the positive elements to one end and negatives elements to another end 
+    using two pointers (leftmost and rightmost index)
+2. Afer moving the elements, just swap the elements for every (i+2 index)

@@ -1,0 +1,13 @@
+Method-1 O(n)-time and O(n)-space
+
+1. Create an array named profit.
+2. Traverse the input array from the end
+3. Fill the profit array with profit by buying and selling a stock once
+    (i.e Assign the maximum as arr[n-1], fill the max of((difference maximum-arr[i]), arr[i+1]) as profit[i], if arr[i]>max, reassign max )
+4. Again start iterating from the beginning, now do the same
+    (i.e Instead of tracing the max, trace the min, find the difference, compare with profit[i-1] and add to profit[i])
+
+Method-2 O(n)-time and O(1)-space
+
+1. Create four variables, firstBuy, firstSell, secondBuy, secondSell
+2. Simulate the above approach using these four variables

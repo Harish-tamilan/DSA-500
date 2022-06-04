@@ -1,0 +1,5 @@
+Method-1 O(nlogn) time O(1) space
+
+1. Sort the array
+2. Assign count to Maximum possible integer
+2. Keep the trace of count by comparing it with difference of (arr[i+m]-arr[i])

@@ -1,0 +1,22 @@
+Method-1 O(n^2) time and O(1) space
+
+1. Sort the array in ascending order
+2. Return the array.length-k index
+
+Method-2 O(nlogn) time and O(k) space
+
+1. Create a priority queue
+2. Iterate the array and add the elements in the priority queue, 
+    if the queue size is larger than k, dequeue an elements
+3. n-k-1 elements would have been dequeued
+4. After the iteration, dequeue the element and return it
+
+Method-3 O(n) time in average case
+
+1. Use the quickSelect method, based on the quick Sort
+2. The idea is, in quickSort, we would place ith element at its correct position each time
+3. So if that element is k, then its the kth largest element
+4. Use the same partition algorithm used in ascending sorting of quick sort
+5. Instead of making two recursive calls, we can make just one
+    (i.e if partitionIndex pi <k , partition(arr, pi+1, r) 
+         else partition (arr,l,pi-1))

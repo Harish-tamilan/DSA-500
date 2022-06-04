@@ -1,0 +1,11 @@
+Method-1 O(nlogn) time and O(1) space
+
+1. Sort the given intervals (arr) based on their starting time
+2. Assign start and end to first meeting's start and end time
+3. Start traversing the array from 1st index, if the start time of current meeting is 
+    less than the end variable, it means that it should get merged.
+4. If the current meeting arr[i]'s end time is greater than end variable, reassign the
+    end variable to current meeting arr[i]'s end time.
+5. Else push the start and end variable to an array, and push that array to resultant
+    variable "intervals", reassign start and end to current meeting arr[i]'s start
+    and end time, arr[start] and arr[end].

@@ -1,0 +1,19 @@
+Method-1 O(n)-time O(n)-space
+
+1. Store the elements in a HashSet.
+2. If a number is already present, then mark it as repeating
+2. Run the loop from 1 to N, if a number is not present then mark it as 
+    missing and break the loop
+3. Return missing and repeating number
+
+Method-2 (Cyclic sort) O(n)-time O(1)-space
+
+1. Swap all the numbers with the number present in its index poisition
+    (i.e) [2,1,3,3] 2 should be in 1st index, so swap 2 with (2-1) index.
+2. Repeat this until an element is present in correct position or it already exists
+     (i.e) 3,1,3,2, in this case 3 is already present in its correct position, so break
+3. Iterate the array from the start, if an element is not present at its correct position
+    then the missing number is index+1, repeating is the number present at that index
+    (i.e) 3,2,3 - 3 is present at 0th index so missing is (0+1)=1, repeating is 3.
+4. Return the missing and repeating number
+

@@ -1,0 +1,11 @@
+Method-1 O(n) time (where n is the length of longest array)
+
+1. Assign i and j to 0
+2. Run a loop such that i<array1.length and j< array2.length
+3. Run two loops again, in order to move i and j to the last poisition if the 
+    duplicates are present
+    (i.e array1=2,2,2,2,4,5 and array2=2,2,2,6 in this case i should be moved to 3rd index
+    and j should be moved to 2nd index) 
+4. Now if array1[i]==array2[j] add either to list, and increment both i and j
+5. Else if array[i]>array2[j] increment j
+6. Else increment i

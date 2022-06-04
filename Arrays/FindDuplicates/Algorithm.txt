@@ -1,0 +1,16 @@
+Method-1 O(n^2) time O(1) space
+
+1. Run two nested loops
+2. Check each number with other in the array
+3. Return the number which is present already
+
+Method-2 O(n) time O(1) space
+
+1. Based on slow pointer and fast pointer approach
+2. Assign both slow and fast as 0
+2. Slow pointer moves to arr[slow] position, fast pointer moves two positions
+    (i.e to arr[arr[fast]] position)
+3. Break the loop once they meet at same position
+4. Assign slow=0, again run the loop, this time both slow and fast one position at a time
+    (i.e slow=arr[slow] and fast=arr[fast])
+5. Break the loop when they meet, return that index's number, that's the repeating one

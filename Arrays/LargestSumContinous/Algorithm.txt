@@ -1,0 +1,8 @@
+Method-1 O(n)-time and O(1)-space
+
+1. Assign temp and sum to arr[0]
+2. Iterate the array from 1st index, 
+    a. if the sum of arr[i] and temp is less than 0, then there is no point of carrying the negative 
+    sum forward, so we reassign temp to 0, if arr[i] is greater than sum, reassign sum to arr[i].
+    b. else add arr[i] to temp, if temp is greater than sum, reassign sum to temp.
+

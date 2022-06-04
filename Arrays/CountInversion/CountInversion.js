@@ -7,9 +7,9 @@ function merge(arr, l, m, r){
         left[i] = arr[l + i];
     for (var j = 0; j < n2; j++)
         right[j] = arr[m + 1 + j];
-        var i = 0;
-        var j = 0, count=0;
-        var k = l;
+    var i = 0;
+    var j = 0, count=0;
+    var k = l;
     while(i<left.length && j<right.length){
         if(left[i]<=right[j]){
             arr[k++] = left[i++];

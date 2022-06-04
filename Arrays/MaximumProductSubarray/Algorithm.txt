@@ -1,0 +1,15 @@
+Method-1 O(n^2) time and O(1) space
+
+1. Run two nested loops.
+2. Find the product between all (i,j) and store it in temp.
+3. If temp is greater than max, reassign max to temp
+
+Method-2 O(n) time and O(1) space
+
+1. Assign two variables min and max
+2. Iterate the array from 1st index, multiply current with minimum and maximum
+    and store it to temp1 and temp2.
+    (i.e if min is -180, max is 60 multiply min with negative gives us a greater value,
+    that is why we need to keep track of min)
+3. Reassign min, max with by comparing them with temp1, temp2 and arr[i]
+4. If max is greater than product reassign product with max

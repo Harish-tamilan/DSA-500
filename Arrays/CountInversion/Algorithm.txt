@@ -1,0 +1,5 @@
+Method-1 O(nlogn)-time
+
+1. Use the merge sort technique
+2. When we merge two sorted arrays, calucate the inversions count by finding the
+    difference between (m+1)-(l+i)

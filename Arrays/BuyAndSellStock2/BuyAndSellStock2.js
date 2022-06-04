@@ -2,8 +2,7 @@ function method1(arr){
     let i, n=arr.length,max=0, min=arr[0];
     let profit = new Array(n);
     //console.log(profit.length);
-    for(i=0;i<n;i++)
-        profit[i] = 0;
+    profit.fill(0);
     max = arr[n-1];
     for(i=n-2;i>=0;i--){
         max = Math.max(max, arr[i]);
@@ -14,6 +13,7 @@ function method1(arr){
         min = Math.min(min, arr[i]);
         profit[i] = Math.max(profit[i-1], profit[i]+(arr[i]-min));
     }
+    //console.log('profit is ', profit);
     return profit[n-1];
 }
 
@@ -24,7 +24,7 @@ function method2(arr){
         first_sell = Math.max(first_sell, first_buy+no);
         second_buy = Math.max(second_buy, first_sell-no);
         second_sell = Math.max(second_sell, second_buy+no);
-       // console.log(first_buy+"-"+first_sell+"-"+second_buy+"-"+second_sell);
+       //console.log(first_buy+","+first_sell+","+second_buy+","+second_sell);
     }
     return second_sell;
 }

@@ -1,0 +1,17 @@
+Method-1 O(n^4) time and O(n^2) space (Since we have to return the result, for just finding O(1) space)
+
+1. Run four nested loops, in order to trace all the possible 4 number combinations
+2. If the sum of four numbers is equal to target, store it in the result array.
+3. Return the result array.
+
+
+Method-1 O(n^3) time and O(n^2) space (Since we have to return the result, for just finding O(1) space)
+
+1. This solution is the extension of three number sum
+2. Sort the array
+3. Run two nested loops, we get i,j at all possible positions
+4. Run a while loop from k=j+1 to l=n-1
+5. Increment k if sum of four is less than target
+6. Decrement l if sum of four is greater than target
+7. If sum of four == target, store it in the result array, decrement l and increment k
+8. Return the result array

@@ -17,7 +17,7 @@ public class KthLargest {
         for(int no:arr){
             queue.add(no);
             if(queue.size()>k){
-                queue.remove();
+                System.out.println("popped element is " + queue.remove());
             }
         }
         return queue.remove();
@@ -64,6 +64,6 @@ public class KthLargest {
         int[] arr = {5,3,4,1,2};
         int i=0;
         for(int no:arr)
-            System.out.println(kthLargest3(arr,0,arr.length-1,++i));
+            System.out.println(kthLargest2(arr,++i));
     }
 }

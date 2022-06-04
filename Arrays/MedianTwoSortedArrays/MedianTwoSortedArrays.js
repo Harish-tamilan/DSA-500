@@ -3,11 +3,9 @@ function method1(arr, arr2) {
     n2 = arr2.length;
   let sum = n + n2;
   let i = 0,
-    j = 0;
+      j = 0;
   while (i < n && j < n2) {
     if (i + j == sum / 2) {
-      console.log("i is ", i, ", j is ", j);
-
       if (i > j) return (arr[i - 1] + arr2[j]) / 2;
       else return (arr[i] + arr2[j - 1]) / 2;
     }

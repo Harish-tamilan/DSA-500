@@ -1,0 +1,10 @@
+Method-1 O(n^2) time
+
+1. Use two nested loops
+2. Try buying and selling on all (i,j) days
+3. Keep the trace of the maximum
+
+Method-2 O(n)-time
+
+1. Assign the i as arr[0]
+2. Start iterating the array from 1st index, if the number is less than arr[j], reassign the i, else find the difference and keep trace of the max

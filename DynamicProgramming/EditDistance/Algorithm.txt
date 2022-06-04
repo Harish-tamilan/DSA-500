@@ -1,0 +1,18 @@
+Method-1 O(n*m) time (n-length of source string, m-length of target string), O(n*m) space
+1. Use the dp approach
+2. Create a 2-d array (mat) of size (n+1)(m+1)
+2. For each character of source string, check all the target string characters
+3. If it matches, proceed further, else there are 3 possibilities
+    1. Insert a new character which costs mat[i-1][j-1]+1 operations
+    2. Remove the existing character which costs mat[i-1][j]+1 operations
+    3. Replace the current character which costs mat[i][j-1]+1 operations
+4. Pick the minimum one and proceed further.
+
+Method-2 O(n*m) time, O(m) space
+1. Use the same dp approach
+2. If we note carefully, we require only the previous row entries for current one,
+    so instead of creating n*m matrix, we can accomplish the same with two 1-d arrays
+3. Create two arrays prev and next
+4. Iterate through the target string and assign the index value to prev array
+5. For each inner iteration, use the prev array to calculate current array
+6. At each outer iteration, reassign prev to current
