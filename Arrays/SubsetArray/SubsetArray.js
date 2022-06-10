@@ -1,4 +1,4 @@
-function SubsetArray(arr){
+function SubsetArray(arr, sub){
     let i=0,n=arr.length;
     let map = new Map();
     for(let no of arr){
@@ -23,5 +23,5 @@ function SubsetArray(arr){
 }
 
 let arr = [10, 5, 2, 23, 19];
-let sub = [19, 5, 3];
-console.log(SubsetArray(arr));
+let sub = [19, 5, 23];
+console.log(SubsetArray(arr, sub));

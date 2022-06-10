@@ -1,0 +1,11 @@
+Method-1 O(nlogn) time
+
+1. Sort the input array
+2. Assign tempMin to arr[0]+k and tempMax to arr[n-1]-k
+3. Assign sum to arr[n-1]+k - tempMin
+4. Traverse the array from 0th index to n-2 index
+5. On each traversal, compare ith index+k arr[i]+k with tempMax and assign the greatest 
+    to max
+6. Similarly, compare i+1th index-k arr[i+1]-k with tempMin and assign the least to min
+7. If max-min<sum, reassign sum to max-min
+8. Return sum

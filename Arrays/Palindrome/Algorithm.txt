@@ -1,0 +1,8 @@
+Method-1 O(n) time and O(1) space
+
+1. Assign n to length of the input string, i=0, j=n-1
+2. Start iterating the array until i<j
+3. During each iteration check whether character at ith index and jth index of the
+    string are same, else return false
+4. Increment i by 1 and decrement j by 1
+5. Return true after the loop

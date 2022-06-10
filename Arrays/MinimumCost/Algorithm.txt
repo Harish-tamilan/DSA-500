@@ -1,0 +1,13 @@
+Method-1 O(n)-time
+
+1. If the length of input array (arr) is lesser than or equal to 1, return 0
+2. If arr[0]=0, return -1, since we can't proceed from there
+3. Assign steps=arr[0], maxIndex=arr[0], count=1
+4. Start iterating the input array from 1st index.
+5. During each iteration check whether the current index has the farthest react, if so
+    reassign maxIndex = arr[i]+i, also decrement the steps by 1.
+6. If the steps is 0, that means one jump is complete, we have to make another jump,
+    so reassign the steps to maxIndex-i, since we already moved to the farthest index
+    and increment the count, if i>maxIndex, that means we have encountered 0's, from 
+    which we coudn't move further.
+7. Return the count

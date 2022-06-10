@@ -33,7 +33,7 @@ function knapsack(weights, values, w){
         mat[i] = new Array(w+1);
         mat[i].fill(0);
     }
-    console.log(mat);
+    //console.log(mat);
     for(i=0;i<=n;i++){
         for(j=0;j<=w;j++){
             if(i==0||j==0){
@@ -45,7 +45,7 @@ function knapsack(weights, values, w){
             }
         }
     }
-    console.log(mat);
+    //console.log(mat);
     return mat[n][w];
 }
 
@@ -93,6 +93,5 @@ let values = [1,2,3];
 quickSort(weights, 0, weights.length-1, values);
 console.log(knapsack(weights, values, 4));
 console.log(knapsack2(weights, values, 4));
-console.log(knapsack3(weights, values, 4));
 // console.log(weights);
 // console.log(values);

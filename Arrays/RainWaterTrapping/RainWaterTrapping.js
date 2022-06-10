@@ -8,11 +8,11 @@ function rainWaterTrapping(arr){
             ind=i;
         }
     }
-    //console.log('sum is ', sum);
+    console.log('sum is ', sum);
     if(ind!=n-1){
         sum -= (prev-arr[n-1]);
     }
-    // console.log('sum is ', sum);
+    console.log('sum is ', sum);
     // console.log('ind... is ', ind);
     next = arr[n-1];
     for(i=n-2;i>ind;i--){
@@ -28,5 +28,5 @@ function rainWaterTrapping(arr){
     return sum;
 }
 //               1     1  2  1     1  2  1  2 
-let arr = [2,0,2];
+let arr = [0,1,0,2,1,0,1,3,2,1,2,1];
 console.log(rainWaterTrapping(arr));

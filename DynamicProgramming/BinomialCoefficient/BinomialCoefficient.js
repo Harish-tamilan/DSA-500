@@ -15,8 +15,21 @@ function method2(c,r){
     let arr = new Array(c+1);
     let i,j;
     for(i=0;i<=c;i++){
-        arr = new Array()
+        arr[i] = new Array(r+1);
+        arr[i].fill(0)
     }
+   // console.log('arr is ', arr);
+    for(i=0;i<=c;i++){
+        for(j=0;j<=Math.min(i,r);j++){
+            if(j==0 || i==j){
+                arr[i][j] = 1;
+            }else{
+                arr[i][j] = arr[i-1][j-1] + arr[i-1][j]
+            }
+        }
+    }
+    return arr[c][r]
 }
 
-console.log(method1(3,2));
+console.log(method1(20,8));
+console.log(method2(20,8));
