@@ -5,25 +5,8 @@ import java.util.*;
 
 public class MergeTwoSortedArrays {
 
-    //O(m^2(logm)) time and O(1) space
-    public static void mergeTwoSortedArrays(int[] arr, int [] arr2){
-        int i=0,j=0,n=arr.length,m=arr2.length,temp;
-        while(i<n && j<m){
-            if(arr[i]>arr2[j]){
-                temp = arr[i];
-                arr[i] = arr2[j];
-                arr2[j] = temp;
-                Arrays.sort(arr2);
-                i++;
-            }else{
-                i++;
-                j++;
-            }
-        }
-    }
-
     //O((n+m)log(n+m)) time and O(1) space
-    public static void mergeTwoSortedArrays2(int[] arr, int[] arr2){
+    public static void mergeTwoSortedArrays(int[] arr, int[] arr2){
         int i=0,j=0,k=arr.length-1,temp;
         while(i<=k && j<arr2.length){
             if(arr[i]<arr2[j])
@@ -40,7 +23,7 @@ public class MergeTwoSortedArrays {
         Arrays.sort(arr2);
     }
 
-    public static void mergeTwoSortedArrays3(int[] arr, int[] arr2){
+    public static void mergeTwoSortedArrays2(int[] arr, int[] arr2){
         int n=arr.length, m=arr2.length, i, j, temp;
         int gap = (n+m)/2;
         while(gap>=1){
@@ -70,9 +53,9 @@ public class MergeTwoSortedArrays {
     }
 
     public static void main(String[] args) {
-        int[] arr = { 1, 5, 9, 10, 15, 20 };
-        int[] arr2 = { 2, 3, 8, 13 };
-        mergeTwoSortedArrays3(arr, arr2);
+        int[] arr = { 100, 112, 256, 349, 770 };
+        int[] arr2 = { 72, 86, 113, 119, 265, 445, 892 };
+        mergeTwoSortedArrays2(arr, arr2);
         System.out.println("Array 1 is ");
         for(int no:arr)
             System.out.print(no+" ");
