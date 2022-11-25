@@ -82,3 +82,7 @@ let val = 5;
 // console.log(method1(arr,val));
 // console.log(method2(arr,val));
 console.log(findPivot(arr));
+
+module.exports = {
+    findPivot
+}

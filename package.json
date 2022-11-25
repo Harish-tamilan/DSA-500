@@ -1,0 +1,22 @@
+{
+  "name": "dsa-500",
+  "version": "1.0.0",
+  "description": "500 DSA questions",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "module",
+    "url": "git+https://github.com/Harish-tamilan/DSA-500.git"
+  },
+  "keywords": [
+    "Nil"
+  ],
+  "author": "Harish Kumar R",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Harish-tamilan/DSA-500/issues"
+  },
+  "homepage": "https://github.com/Harish-tamilan/DSA-500#readme"
+}

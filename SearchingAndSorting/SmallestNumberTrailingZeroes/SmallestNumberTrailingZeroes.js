@@ -1,3 +1,5 @@
+const  findPivot = require('../RotiPrata');
+
 function isPossible(num, n){
     let i=5;
     let count=0;
