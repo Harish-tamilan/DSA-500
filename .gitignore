@@ -1,3 +1,8 @@
 /sample.go
 /sample.js
 /sample.java
+/node_modules
+/.idea
+/out
+/DSA-500.iml
+/package-lock.json

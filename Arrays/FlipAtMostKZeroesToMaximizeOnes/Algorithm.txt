@@ -1,0 +1,11 @@
+Algorithm
+
+1. Use a sliding window to find the range in which the zeroes can be flipped
+2. Initialize left and right to 0, assign temp = m
+3. Run a loop till right < n ( n = length of the array)
+4. If arr[right]==0, decrement temp.
+5. During each iteration, check whether temp<0 ( m zeroes has been changed to ones), if so move the left pointer
+until it encounters next zero, move the left pointer to next index and increment temp.
+6. Move the right pointer if temp>=0. And check whether the length of the sliding window (right - left) is greater
+than the existing count (max), if so reassign max, l, r.
+

@@ -4,7 +4,8 @@
   "description": "500 DSA questions",
   "main": "app.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "flip": "ts-node Arrays/FlipAtMostKZeroesToMaximizeOnes/FlipAtMostKZeroesToMaximizeOnes.ts"
   },
   "repository": {
     "type": "module",
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Harish-tamilan/DSA-500/issues"
   },
-  "homepage": "https://github.com/Harish-tamilan/DSA-500#readme"
+  "homepage": "https://github.com/Harish-tamilan/DSA-500#readme",
+  "devDependencies": {
+    "@types/node": "^18.13.0"
+  }
 }

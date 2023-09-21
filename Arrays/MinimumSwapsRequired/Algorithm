@@ -1,0 +1,15 @@
+1. The algorithm is based on sliding window approach.
+2. First find the number of good ones (elements lesser than or equal to k), this is the size of the
+    sliding window (lesserThanOrEqToK).
+3. Next find the number of bad ones (elements greater than k) in the range (0-lesserThanOrEqToK) and initialize it to
+    greaterThanK.
+4. Start moving the sliding window towards right.
+5. During each iteration check if arr[i] is  greater than k if so decrement greaterThanK (since we are excluding a
+    bad one from our sliding window) also check if arr[j] is greater than k if so increment greaterThanK
+    (since we are including a bad one to our sliding window).
+6. Check whether current greaterThanK is less than previous greaterThanK (ans), if so reassign ans to greaterThanK
+
+    Question:
+    Why are we considering greaterThanK as our ans and reassigning it whenever it decreases to ans ?
+        Because, however you place elements, the maximum replacements will be equal to the less than number of bad ones
+        in the range of good ones (lesserThanOrEqToK).

@@ -1,22 +1,23 @@
-function smallestSubarrayWithSumGreater(arr, k) {
-  let i=0,n=arr.length,sum=0;
-  let start=0,len=n+1;
-  while(i<n){
-      while(i<n && sum<=k){
-          sum+=arr[i];
-          i++;
-      }
-      while(sum>k && start<n){
-          if(i-start<len){
-              len = i-start;
-          }
-          sum = sum-arr[start++];
-      }
-  }
-  console.log('start is ', start);
-  return len;
+function smallestSubWithSum(arr,n,k){
+    //code here
+    let sum=arr[0], right=0, left=0, len=Number.MAX_VALUE, temp=0;
+while(right<n){
+     if(sum<=k){
+        right++;
+        sum += arr[right];
+    }
+    if(sum>k){
+        temp = right-left;
+        if(temp<len){
+            len = temp;
+        }
+        sum-=arr[left];
+        left++;
+    }
+}
+return len+1;
 }
 
 let arr = [1, 4, 45, 6, 10, 19];
 let x = 51;
-console.log(smallestSubarrayWithSumGreater(arr, x));
+console.log(smallestSubWithSum(arr, x));

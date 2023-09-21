@@ -7,16 +7,16 @@ function method1(arr, arr2){
     while(l<=r){
         let x = Math.floor((l+r)/2);
         let y = Math.floor((n+n2+1)/2)-x;
-        console.log("x is ", x);
-        console.log("y is ", y);
+//        console.log("x is ", x);
+//        console.log("y is ", y);
         let minx = x>0?arr[x-1]:Number.MIN_VALUE;
         let maxx = x<n?arr[x]:99999;
         let miny = y>0?arr2[y-1]:Number.MIN_VALUE;
         let maxy = y<n2?arr2[y]:99999;
-        console.log("minx is ", minx);
-        console.log("maxx is ", maxx);
-        console.log("miny is ", miny);
-        console.log("maxy is ", maxy);
+//        console.log("minx is ", minx);
+//        console.log("maxx is ", maxx);
+//        console.log("miny is ", miny);
+//        console.log("maxy is ", maxy);
         if(miny<=maxx && minx<=maxy){
             if((n+n2)%2==0){
                 let num = Math.max(minx, miny);

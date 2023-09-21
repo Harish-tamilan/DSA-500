@@ -23,6 +23,8 @@ function method1(arr, k, n){
     return swaps;
 }
 
+function method2()
+
 let arr = [2, 1, 5, 6, 3];
 let k = 3;
 
